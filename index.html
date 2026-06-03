@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MALIK_OLIVER_TERMINAL</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="crt-flicker"></div>
+    
+    <main class="dashboard">
+        <header class="header">
+            <h1>MALIK_OLIVER</h1>
+            <p>>_ Backend & AI Engineer</p>
+        </header>
+
+        <section class="grid-container">
+            <div class="box" id="work">
+                <h2>LOG_HISTORY</h2>
+                <div class="entry"><h3>AI QA Specialist @ Outlier</h3><p>Func-testing & logic validation.</p></div>
+            </div>
+
+            <div class="box terminal-box">
+                <h2>AI_PORTFOLIO_AGENT [ONLINE]</h2>
+                <div id="terminal-history"></div>
+                <input type="text" id="terminal-input" placeholder=">_">
+            </div>
+
+            <div class="box" id="skills">
+                <h2>SKILLS_MATRIX</h2>
+                <div class="skill-category">
+                    <h3>[CORE_AI_&_ENGINEERING]</h3>
+                    <p>PyTorch, Curated LLMs, Hugging Face, Deep Learning, Machine Learning, AI Agents, Tool Orchestration, LangChain, LangGraph, RAG, Prompt Engineering, Vector Databases</p>
+                </div>
+                <div class="skill-category">
+                    <h3>[LANGUAGES_&_BACKEND_SYSTEMS]</h3>
+                    <p>Python, JavaScript/TypeScript, Node.js, RESTful APIs, SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>[DATABASES_&_DATA]</h3>
+                    <p>PostgreSQL, MongoDB, Redis, JSON, Data Analysis, System Design, SDLC</p>
+                </div>
+                <div class="skill-category">
+                    <h3>[DEVOPS_TOOLS_&_RELIABILITY]</h3>
+                    <p>Docker, Azure, Langfuse, NewRelic Logs, CI/CD, Playwright (E2E), Postman, TDD, Git, Maven, Linux</p>
+                </div>
+            </div>
+
+            <div class="box" id="contact">
+                <h2>LINK_HUB</h2>
+                <p>EMAIL: <a href="#" onclick="openModal()">TRANSMIT_MESSAGE</a></p>
+                <div class="socials">
+                    <a href="https://github.com/malikoliver25" target="_blank">GITHUB</a> | 
+                    <a href="https://www.linkedin.com/in/malik-o-1b4359115" target="_blank">LINKEDIN</a> | 
+                    <a href="https://leetcode.com/u/Malik220/" target="_blank">LEETCODE</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>_SEND_MESSAGE</h2>
+            <form id="contact-form">
+                <input type="text" name="subject" placeholder="SUBJECT" required>
+                <textarea name="message" placeholder="BODY" required></textarea>
+                <button type="submit">TRANSMIT</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer style="text-align: center; font-size: 0.7rem; color: #1a331a; margin-top: 40px; padding-bottom: 20px;">
+        &copy; 2026 MALIK OLIVER | ALL RIGHTS RESERVED
+    </footer>
+</body>
+</html>
