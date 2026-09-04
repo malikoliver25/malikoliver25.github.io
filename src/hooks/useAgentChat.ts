@@ -4,16 +4,9 @@ import knowledge from '@/data/agent-knowledge.json';
 export type ChatRole = 'user' | 'assistant';
 export interface ChatMessage { id: string; role: ChatRole; content: string; }
 
-// @ts-ignore — Vite provides import.meta.env; tsc with ES2020 target would otherwise error before vite transform
-const API_URL: string | undefined = (() => {
-  try {
-    // @ts-ignore — import.meta allowed with ESNext module (vite transform)
-    const meta = (import.meta as unknown) as { env?: Record<string, string | undefined> };
-    return meta.env?.VITE_AGENT_API;
-  } catch {
-    return undefined;
-  }
-})();
+// Vite replaces this literal at build — do not wrap import.meta
+// @ts-ignore
+const API_URL: string | undefined = import.meta.env.VITE_AGENT_API as string | undefined;
 function getLatestProject(): string {
   const gh = (knowledge.knowledge as Array<{ id: string; content: string }>).find(k => k.id === 'github')?.content || '';
   const firstLine = gh.split('\n').find(l => l.startsWith('- ')) || '';
