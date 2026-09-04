@@ -20,3 +20,14 @@
 
 ## Previous reviews
 - 2026-09-04 interface-review HEAD~1..HEAD `63f4f2d` — Verdict Approve, one MEDIUM writing fix collapsed `useAgentChat.ts:31` roles→job guard (tsc passes)
+
+## mobile-testing — native out of scope, web-mobile via Playwright
+App type: **Web SPA** (Vite+React on GH Pages) — not Native iOS/Android, React Native, Flutter, or hybrid (no `android/`/`ios/`, no `react-native`/`expo`/`capacitor`). Framework decision per skill:
+- Native/hybrid → Appium 3.x, RN → Detox, cross-platform YAML → Maestro, Flutter → Patrol — **none apply** (no binary to drive, no `TestFlight`/`Firebase App Distribution`).
+- **Web-mobile** → Playwright device emulation (already in `playwright.config.ts`: `mobile-chrome` Pixel 7, `mobile-safari` iPhone 15, `ipad` P2). This satisfies viewport/touch/layout for a responsive portfolio.
+- Real devices vs emulators: emulated viewports on every PR (fast); real-device farm (BrowserStack App Automate / Sauce / AWS Device Farm) reserved for native release validation — not warranted for static site.
+- OS coverage: same proxy as browser matrix (`docs/browser-matrix.md`, next-review 2026-12-04); no first-party iOS/Android version analytics yet.
+- CI: GH Pages deploy workflow; cross-browser P0 runs emulated mobile on every PR (see `playwright.config.ts` webServer). No Appium `uiautomator2`/`xcuitest` drivers, no `maestro test`, no `detox test --configuration ios.sim.debug`.
+- Mobile-specific patterns (skill § Mobile-Specific Testing Patterns): deep links (web hash `#transmission` → `toBeInViewport` in `tests/cross-browser.spec.ts`), push/biometrics/offline/permission dialogs — **web equivalents only**; native push (`sendUserNotification`), biometric enrollment (`setBiometricEnrollment`), `mobile: shell` airplane-mode, `autoGrantPermissions` — out of scope (no native permissions).
+- Gesture: scroll/swipe via Playwright `page` + GSAP `ScrollTrigger` once:true; pinch/rotate not applicable (no map/canvas gesture).
+- Done-When mapping: device matrix = mobile rows of `docs/browser-matrix.md`; gesture test = `cross-browser.spec.ts` NOVA dock + anchor scroll; deep-link cold-start = hash `#transmission` navigation; push coverage = deferral (no FCM) — documented here per skill (ticket: "no native push — web Notification API not implemented").
