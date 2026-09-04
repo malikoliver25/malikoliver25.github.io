@@ -2,27 +2,29 @@
 node_modules
 .pnp
 .pnp.js
+vendor
 
 # build output
 dist
 dist-ssr
-*.local
+build
+out
+.next
+.nuxt
+.cache
+.parcel-cache
+*.tsbuildinfo
+tsconfig.tsbuildinfo
 
-# env
+# env — never commit secrets
 .env
 .env.*
 !.env.example
 
-# editor / os
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+desktop.ini
 
 # logs
 logs
@@ -31,5 +33,51 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# temp / cache
+*.tmp
+*.temp
+*.cache
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+
+# vercel
 .vercel
-.env*
+
+# test artifacts
+coverage
+.nyc_output
+test-results
+playwright-report
+test-results.xml
+junit.xml
+
+# backup / personal junk
+*.bak
+*_old.*
+*_backup.*
+*_copy.*
+TODO.txt
+NOTES.txt
+scratch.*
+test123.*
+
+# python (for local helpers)
+__pycache__
+*.pyc
+*.pyo
+.venv
+venv
