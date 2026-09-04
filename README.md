@@ -1,6 +1,6 @@
 # voidprotocol-labs — Malik Oliver Portfolio
 
-Infrastructural portfolio for **MLOps & Air-Gapped AI** (Malik Oliver — Indianapolis, open to Chicago). Dark editorial system (Void #06080B / Paper #EEF2F7, Space Grotesk / JetBrains Mono), GSAP `ScrollTrigger` reveals, Three.js field, and **NOVA** — a TVA Miss Minutes-style assistant that answers only from live GitHub + site knowledge.
+Infrastructural portfolio for **MLOps & Air-Gapped AI** Dark editorial system (Void #06080B / Paper #EEF2F7, Space Grotesk / JetBrains Mono), GSAP `ScrollTrigger` reveals, Three.js field, and **NOVA** — a TVA Miss Minutes-style assistant that answers only from live GitHub + site knowledge.
 
 > Live: `https://voidprotocol-labs.github.io` (GitHub Pages) · API: `https://malikoliver25githubio.vercel.app/api/chat` (Vercel)
 
