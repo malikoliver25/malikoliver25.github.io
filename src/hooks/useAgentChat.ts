@@ -28,9 +28,7 @@ function localMockReply(last: string): string {
   }
   if (q.includes('best role') || q.includes('primary role') || q.includes('strongest role') || q.includes('what is his role') || q.includes('what does malik do') || (q.includes('role') && (q.includes('best') || q.includes('top') || q.includes('main')))) return `Primary: MLOps & AI Infrastructure Engineer. Strongest: MLOps/AI Orchestration — Level 5 in K8s, Docker, CI/CD, Python, FastAPI, LangGraph, Agentic Arch, vLLM. That’s his superpower.`;
   if (q.includes('ai engineer') || q.includes('ai engineering')) return `Yep — Malik is an AI Engineer (and MLOps) at core: LangGraph 5, Agentic Arch 5, RAG 4, vLLM 5. He builds agentic systems + air-gapped LLM infra, not toy demos. Title: MLOps & AI Infrastructure Engineer.`;
-  if (q.includes('roles') || q.includes('what roles') || q.includes('could malik fill') || q.includes('positions') || q.includes('job')) {
-    if (q.includes('fill') || q.includes('roles') || q.includes('positions') || q.includes('could')) return `Malik fits: MLOps Engineer, AI Infrastructure Engineer, Platform/DevOps (K8s), AI Application Engineer (LangGraph/RAG), and QA/Automation (Pytest/Playwright). Strongest: MLOps/AI Infra — Level 5 in K8s, Python, FastAPI, LangGraph, vLLM.`;
-  }
+  if (q.includes('roles') || q.includes('what roles') || q.includes('could malik fill') || q.includes('positions') || q.includes('job')) return `Malik fits: MLOps Engineer, AI Infrastructure Engineer, Platform/DevOps (K8s), AI Application Engineer (LangGraph/RAG), and QA/Automation (Pytest/Playwright). Strongest: MLOps/AI Infra — Level 5 in K8s, Python, FastAPI, LangGraph, vLLM.`;
   if (q.includes('good at') || q.includes('is malik good')) {
     if (q.includes('qa')) return `QA? Yep — Pytest 5, TDD 4, Playwright 3 — disciplined, not just “it works on my machine.”`;
     if (q.includes('ai engineering') || q.includes('ai engineer')) return `AI Eng? Core strength — LangGraph 5, Agentic Arch 5, RAG 4. He ships agentic systems, not demos.`;
