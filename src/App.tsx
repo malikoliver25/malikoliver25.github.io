@@ -10,7 +10,7 @@ import { projects } from "@/data/projects";
 import { skillCategories } from "@/data/skills";
 import { certifications } from "@/data/certs";
 import BootSequence from "@/components/BootSequence/BootSequence";
-
+import AgentDock from "@/components/AgentDock/AgentDock";
 function usePrefersReducedMotion() {
   const [reduced, setReduced] = useState(false);
   useEffect(() => {
@@ -223,6 +223,7 @@ export default function App() {
           <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-hairline pt-6"><div className="font-mono text-[10px] tracking-[0.14em] text-mist/60">SPEC: 1440px frame • Hairline #1C232E • Display Space Grotesk • Mono JetBrains Mono • Motion GSAP + native scroll</div><div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.12em] text-mist/50"><span className="h-1.5 w-1.5 rounded-full bg-[#18E07A]" aria-hidden="true" /> ALL SYSTEMS NOMINAL</div></div>
         </div>
       </footer>
+      <AgentDock enabled={bootComplete} />
       <style>{`@media (prefers-reduced-motion: reduce) { .split-word { transform: none !important; } }`}</style>
     </div>
   );

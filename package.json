@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "typecheck": "tsc --noEmit",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "knowledge:build": "node scripts/build-knowledge.mjs",
+    "knowledge:sync": "node scripts/sync-github.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -17,6 +19,7 @@
     "three": "^0.163.0"
   },
   "devDependencies": {
+    "@types/node": "^26.4.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/three": "^0.185.4",
