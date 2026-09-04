@@ -40,6 +40,10 @@ type ChatReq = { method?: string; headers: Record<string, string | string[] | un
 type ChatRes = { status: (c:number)=>ChatRes; json: (b:unknown)=>void; setHeader:(k:string,v:string)=>void; write:(c:string)=>void; end:()=>void };
 
 export default async function handler(req: ChatReq, res: ChatRes) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') { res.status(204).end(); return; }
   if (req.method !== 'POST') { res.status(405).json({ error: 'POST only' }); return; }
   const fwd = req.headers['x-forwarded-for'];
   const ip = (typeof fwd === 'string' ? fwd.split(',')[0] : Array.isArray(fwd) ? fwd[0] : 'unknown') || 'unknown';
