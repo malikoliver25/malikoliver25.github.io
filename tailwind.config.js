@@ -4,66 +4,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        "void-black": "#0A0A0A",
-        "dark-charcoal": "#121212",
-        "neon-yellow": "#FCEE0A",
-        "electric-cyan": "#00F0FF",
-        "glitch-red": "#FF003C",
-        "matrix-slate": "#8F9BA8",
+        void: "#06080B",
+        ink: "#0E131A",
+        panel: "#141A23",
+        hairline: "#1C232E",
+        "hairline-strong": "#253041",
+        mist: "#8B9AB1",
+        "mist-soft": "#C2CFE2",
+        paper: "#EEF2F7",
+        signal: "#FFE81A",
+        cyan: "#00E5FF",
+        "signal-soft": "rgba(255,232,26,0.12)",
+        "cyan-soft": "rgba(0,229,255,0.12)",
       },
       fontFamily: {
-        mono: ['"Fira Code"', "Courier New", "monospace"],
-        heading: ['"Orbitron"', '"Inter"', "sans-serif"],
-        body: ['"Inter"', "sans-serif"],
+        display: ['"Space Grotesk"', '"Instrument Sans"', "Inter", "sans-serif"],
+        mono: ['"JetBrains Mono"', '"Fira Code"', "monospace"],
+        body: ["Inter", "sans-serif"],
       },
-      padding: {
-        safe: "env(safe-area-inset-bottom)",
+      maxWidth: {
+        frame: "1440px",
       },
       animation: {
-        flicker: "flicker 0.15s infinite",
-        "flicker-slow": "flicker 0.3s infinite",
-        glitch: "glitch 0.3s ease-in-out",
-        scanline: "scanline 6s linear infinite",
-        "typing-cursor": "typingCursor 1s step-end infinite",
-        "glow-pulse": "glowPulse 2s ease-in-out infinite",
-        "slide-up": "slideUp 0.5s ease-out",
+        "hairline-draw": "hairlineDraw 1.2s cubic-bezier(0.16,1,0.3,1) forwards",
       },
       keyframes: {
-        flicker: {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.97" },
-          "25%": { opacity: "0.99" },
-          "75%": { opacity: "0.96" },
+        hairlineDraw: {
+          "0%": { transform: "scaleX(0)" },
+          "100%": { transform: "scaleX(1)" },
         },
-        glitch: {
-          "0%": { transform: "translate(0)" },
-          "20%": { transform: "translate(-2px, 2px)" },
-          "40%": { transform: "translate(-2px, -2px)" },
-          "60%": { transform: "translate(2px, 2px)" },
-          "80%": { transform: "translate(2px, -2px)" },
-          "100%": { transform: "translate(0)" },
-        },
-        scanline: {
-          "0%": { transform: "translateY(-100%)" },
-          "100%": { transform: "translateY(100%)" },
-        },
-        typingCursor: {
-          "0%, 100%": { borderColor: "transparent" },
-          "50%": { borderColor: "#00F0FF" },
-        },
-        glowPulse: {
-          "0%, 100%": { boxShadow: "0 0 5px #00F0FF, 0 0 10px #00F0FF" },
-          "50%": { boxShadow: "0 0 10px #00F0FF, 0 0 20px #00F0FF, 0 0 30px #00F0FF" },
-        },
-        slideUp: {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-      },
-      boxShadow: {
-        neon: "0 0 5px #00F0FF, 0 0 10px #00F0FF",
-        "neon-yellow": "0 0 5px #FCEE0A, 0 0 10px #FCEE0A",
-        "neon-strong": "0 0 10px #00F0FF, 0 0 20px #00F0FF, 0 0 40px #00F0FF",
       },
     },
   },
