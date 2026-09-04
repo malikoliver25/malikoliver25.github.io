@@ -1,0 +1,12 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0,
+  "maxSteps": 18,
+  "maxTokens": 120000,
+  "seed": "portfolio-smoke-001",
+  "promptCache": true,
+  "goalFile": "goals/smoke.goal.md",
+  "entryUrl": "http://localhost:5173/",
+  "resultFile": "result.json",
+  "timeoutMs": 120000
+}

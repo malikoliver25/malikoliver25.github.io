@@ -1,0 +1,29 @@
+name: agentic-smoke
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      # Seed ephemeral state — static portfolio has no DB, but --isolated profile gives fresh state
+      - name: Build
+        run: npm run build
+      - name: Run agent goal (deterministic harness)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/run-agent-goal.mjs --config agent-run.config.json
+      - name: Gate the merge on the boolean verdict (not prose)
+        run: |
+          test "$(jq -r .passed result.json)" = "true" || { cat result.json; exit 1; }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agentic-smoke-result
+          path: result.json
