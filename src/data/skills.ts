@@ -2,19 +2,6 @@ import type { SkillCategory } from "@/types";
 
 export const skillCategories: SkillCategory[] = [
   {
-    category: "INFRASTRUCTURE & ORCHESTRATION",
-    icon: "⬡",
-    skills: [
-      { name: "Kubernetes (K8s)", level: 5 },
-      { name: "Docker", level: 5 },
-      { name: "Terraform (IaC)", level: 4 },
-      { name: "CI/CD Pipelines", level: 5 },
-      { name: "Azure", level: 4 },
-      { name: "Apache Airflow", level: 3 },
-      { name: "Air-Gapped Deployments", level: 4 },
-    ],
-  },
-  {
     category: "BACKEND & AI ORCHESTRATION",
     icon: "◈",
     skills: [
@@ -30,6 +17,19 @@ export const skillCategories: SkillCategory[] = [
       { name: "RESTful APIs", level: 5 },
       { name: "Redis", level: 3 },
       { name: "SQL", level: 4 },
+    ],
+  },
+  {
+    category: "INFRASTRUCTURE & ORCHESTRATION",
+    icon: "⬡",
+    skills: [
+      { name: "Kubernetes (K8s)", level: 5 },
+      { name: "Docker", level: 5 },
+      { name: "Terraform (IaC)", level: 4 },
+      { name: "CI/CD Pipelines", level: 5 },
+      { name: "Azure", level: 4 },
+      { name: "Apache Airflow", level: 3 },
+      { name: "Air-Gapped Deployments", level: 4 },
     ],
   },
   {

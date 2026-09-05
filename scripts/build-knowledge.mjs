@@ -37,9 +37,9 @@ const recruiterStatic = `RECRUITER FAQ — derived from site data (projects + sk
 Q: What coding language does Malik use the most?
 A: Python — leads for MLOps/AI (LangGraph, FastAPI, vLLM) plus TypeScript for the portfolio terminal. GitHub live count via sync-github shows Python strongest by repo count.
 Q: Based on all of Malik's work what is his primary/strongest role?
-A: Primary: MLOps & AI Infrastructure Engineer. Strongest: MLOps/AI Orchestration — Level 5 in Kubernetes, Docker, CI/CD, Python, FastAPI, LangGraph, Agentic Architecture, vLLM.
+A: Primary: Backend & AI Engineer specializing in MLOps & AI Infrastructure. Strongest: Backend/AI Orchestration — Level 5 in Python, FastAPI, LangGraph, Agentic Architecture, RESTful APIs plus Level 5 in Kubernetes, Docker, CI/CD, vLLM. Ships air-gapped, containerized LLM systems (MTM Industrial) and agentic orchestration (Sentinel-Core).
 Q: Is Malik good at QA/AI Engineering/MLOps/DevOps?
-A: QA: TDD 4, Pytest 5, Playwright 3 — disciplined. AI Eng: LangGraph 5, RAG 4 — core strength. MLOps: vLLM 5, K8s 5 — strongest. DevOps: K8s/Docker/CI/CD 5, Terraform 4 — strong.
+A: QA: TDD 4, Pytest 5, Playwright 3 — disciplined. AI Eng: LangGraph 5, RAG 4, MCP 4 — core strength. MLOps/Infra: vLLM 5, K8s 5, Docker 5 — strongest differentiator. Backend: FastAPI 5, Python 5, REST 5 — primary role.
 Q: What is Malik's largest/best project?
 A: SENTINEL-CORE (graph security orchestration) for impact, MTM-INDUSTRIAL-AI (CMMC air-gapped Llama Vision) for production. See projects.ts for tech stacks.
 Q: Has Malik made media sites or games?
